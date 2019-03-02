@@ -5,6 +5,7 @@ namespace Calculadora
 {
     public partial class Form1 : Form
     {
+        Calculadora calculadora = new Calculadora();
         public Form1()
         {
             InitializeComponent();
@@ -45,8 +46,39 @@ namespace Calculadora
 
         private void btnSoma_Click(object sender, EventArgs e)
         {
+
+            calculadora.numero1 = int.Parse(txtNumero1.Text);
+            calculadora.numero2 = int.Parse(txtNumero2.Text);
+            txtResultado.Text = Convert.ToString(calculadora.numero1 + calculadora.numero2);
           
            
+        }
+
+        private void btnSubtrair_Click(object sender, EventArgs e)
+        {
+
+            calculadora.numero1 = int.Parse(txtNumero1.Text);
+            calculadora.numero2 = int.Parse(txtNumero2.Text);
+            txtResultado.Text = Convert.ToString(calculadora.numero1 - calculadora.numero2);
+
+        }
+
+        private void btnMultiplicacao_Click(object sender, EventArgs e)
+        {
+            calculadora.numero1 = int.Parse(txtNumero1.Text);
+            calculadora.numero2 = int.Parse(txtNumero2.Text);
+            txtResultado.Text = Convert.ToString(calculadora.numero1 * calculadora.numero2);
+
+
+        }
+
+        private void btnDivisao_Click(object sender, EventArgs e)
+        {
+            calculadora.numero1 = int.Parse(txtNumero1.Text);
+            calculadora.numero2 = int.Parse(txtNumero2.Text);
+            txtResultado.Text = Convert.ToString(calculadora.numero1 / calculadora.numero2);
+
+
         }
     }
 }

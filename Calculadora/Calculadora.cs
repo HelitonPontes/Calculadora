@@ -12,6 +12,11 @@ namespace Calculadora
         public float numero2;
         public float resultado;
 
+        public void Somar()
+        {
+            resultado = numero1 = numero2;
+        }
+
       
     }
 
